@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.625rem;
+  
+}
+
+.pokedex-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+  padding: 0px, 0.625rem;
+}
+
+.loading-text {
+  color: #fff;
+  font-size: 2rem;
+  padding: 1.75rem;
+}
+
+@media screen and (max-width: 992px) {
+  .pokedex-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .pokedex-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

@@ -1,0 +1,16 @@
+html {
+  background: rgb(10, 48, 55);
+}
+
+.App {
+  font-family: sans-serif;
+  background-color: rgb(10, 48, 55);
+  color: #fff;
+}
+
+.not-found {
+  background: rgb(76, 18, 18);
+  color: #fff;
+  font-size: 2rem;
+  padding: 1.75rem;
+}
