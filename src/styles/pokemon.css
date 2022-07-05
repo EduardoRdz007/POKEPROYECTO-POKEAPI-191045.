@@ -1,10 +1,12 @@
 .pokemon-card {
-  display: flex;
-  box-shadow: 4px 4px 4px #1eac9b;
-  border-radius: 0.18rem;
-  background: #1eac9b;
-  margin-left: 0.625rem;
-  margin-right: 0.625rem;
+  width: 60%;
+  height: 100%;
+  max-height: 300px;
+  padding: auto;
+  text-align: center;
+  background: #366e52;
+  border-radius: 10px;
+  box-shadow: 25px 25px 50px #0a3636, -25px -25px 50px #256d55;
 }
 
 .pokemon-img-container {
