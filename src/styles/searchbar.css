@@ -26,11 +26,14 @@
 }
 
 .searchbar-btn button {
-  background-color: #363636;
-  border: none;
-  border-radius: 10%;
-  height: 100%;
+  width: 64px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
   color: #fff;
-  padding: 0.62rem 0.75rem;
-  margin-left: 1.25rem;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
 }
+
