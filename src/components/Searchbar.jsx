@@ -11,6 +11,7 @@ const Searchbar = (props) => {
             onSearch(null);
         }
     }
+
     const onClick = async (e) => {
         onSearch(search);
     }
