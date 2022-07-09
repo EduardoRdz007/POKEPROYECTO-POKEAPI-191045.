@@ -14,3 +14,14 @@ html {
   font-size: 2rem;
   padding: 1.75rem;
 }
+
+.btnMx{
+  height: 50px;
+  width: 50px;
+  float: right;
+}
+.btnUs{
+  height: 50px;
+  width: 50px;
+  float: right;
+}

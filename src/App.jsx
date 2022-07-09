@@ -92,16 +92,14 @@ function App() {
 
     return (
       <div className="App">
-      <h1>{t("title")}</h1>
-      <h2>{t("subtitle")}</h2>
-      <div className="link-container">
+         <div className="link-container">
         <p
           className={`App-link ${
             i18n.language === "es" ? "selected" : "unselected"
           }`}
           onClick={() => changeLaguage("es")}
         >
-          🇲🇽
+         <button class="btnMx">🇲🇽</button> 
         </p>
         <p
           className={`App-link ${
@@ -109,9 +107,12 @@ function App() {
           }`}
           onClick={() => changeLaguage("en")}
         >
-          🇺🇸
+          <button class="btnUs">🇺🇸</button>
         </p>
       </div>
+      <h1>{t("title")}</h1>
+      <h2>{t("subtitle")}</h2>
+     
       <FavoriteProvider value={{favoritePokemons: favorites, updateFavoritePokemons: updateFavoritePokemons}}>  
         <div>
             <Navbar />
