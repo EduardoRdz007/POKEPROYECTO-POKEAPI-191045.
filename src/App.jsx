@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useTransition } from "react";
 import { getPokemonData, getPokemons, searchPokemon } from "./api";
 import Navbar from "./components/Navbar";
 import Pokedex from "./components/Pokedex";
 import Searchbar from "./components/Searchbar";
 import { FavoriteProvider } from "./contexts/favoritesContext";
 import "./app.css";
+import { useTranslation } from "react-i18next";
 
 const localStorageKey = "favorite_pokemon";
 
@@ -17,6 +18,11 @@ function App() {
     const [favorites, setFavorites] = useState([]);
     const [notFound, setNotFound] = useState(false);
     const [searching, setSearching] =useState(false);
+    const {i18n, t} = useTranslation();
+
+    function changeLaguage(language){
+      i18n.changeLanguage(language);
+    }
 
     const fetchPokemons = async () => {
         try {
@@ -85,6 +91,27 @@ function App() {
     };
 
     return (
+      <div className="App">
+      <h1>{t("title")}</h1>
+      <h2>{t("subtitle")}</h2>
+      <div className="link-container">
+        <p
+          className={`App-link ${
+            i18n.language === "es" ? "selected" : "unselected"
+          }`}
+          onClick={() => changeLaguage("es")}
+        >
+          🇲🇽
+        </p>
+        <p
+          className={`App-link ${
+            i18n.language === "en" ? "selected" : "unselected"
+          }`}
+          onClick={() => changeLaguage("en")}
+        >
+          🇺🇸
+        </p>
+      </div>
       <FavoriteProvider value={{favoritePokemons: favorites, updateFavoritePokemons: updateFavoritePokemons}}>  
         <div>
             <Navbar />
@@ -105,8 +132,10 @@ function App() {
             )}
             </div>
         </div>
+     
         </FavoriteProvider>  
+      </div>
     );
 }
 
-export default App
+export default App;
