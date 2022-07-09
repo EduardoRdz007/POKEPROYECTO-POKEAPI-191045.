@@ -19,9 +19,12 @@ html {
   height: 50px;
   width: 50px;
   float: right;
+  background: rgb(11, 166, 177);
 }
 .btnUs{
   height: 50px;
   width: 50px;
   float: right;
+  float: right;
+  background: rgb(11, 166, 177);
 }

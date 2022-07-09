@@ -1,7 +1,7 @@
 .searchbar-container {
   display: flex;
-  margin: 0 0.625rem;
-  padding: 0 1.25rem;
+  margin: 0 0.115rem;
+  padding: 0 0.115rem;
   align-items: center;
   flex: 1;
   align-items: stretch;
