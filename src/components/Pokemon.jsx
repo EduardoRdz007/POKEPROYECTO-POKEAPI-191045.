@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import FavoriteContext from "../contexts/favoritesContext";
+import FavoriteContext from "../contexts/global/favorite.context";
 import "../styles/pokemon.css";
 
 const Pokemon = (props) => {
