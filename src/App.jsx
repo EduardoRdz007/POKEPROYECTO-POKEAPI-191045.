@@ -3,7 +3,7 @@ import { getPokemonData, getPokemons, searchPokemon } from "./api";
 import Navbar from "./components/Navbar";
 import Pokedex from "./components/Pokedex";
 import Searchbar from "./components/Searchbar";
-import { FavoriteProvider } from "./contexts/favoritesContext";
+import { FavoriteProvider } from "./contexts/global/favorite.context";
 import "./app.css";
 import { useTranslation } from "react-i18next";
 
@@ -39,7 +39,7 @@ function App() {
         } catch(err) {}
     };
 
-    // carga pokes favoritos
+    // carga pokes favoritos<<<<<<<<<s
     const loadFavoritePokemons = () => {
       const pokemons = JSON.parse(window.localStorage.getItem(localStorageKey)) || [];
       setFavorites(pokemons);
@@ -135,7 +135,7 @@ function App() {
         </div>
      
         </FavoriteProvider>  
-      </div>
+       </div>
     );
 }
 

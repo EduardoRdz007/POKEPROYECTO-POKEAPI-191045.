@@ -1,10 +1,17 @@
 import "../styles/pokedex.css";
 import Pagination from "./Pagination";
 import Pokemon from "./Pokemon";
+import { useTranslation } from "react-i18next";
+
+
 
 const Pokedex = (props) => {
 
     const { pokemons, page, setPage, total, loading } = props;
+    const {i18n, t} = useTranslation();
+    function changeLaguage(language){
+        i18n.changeLanguage(language);
+      }
 
     //retrocede una pagina
     const lastPage = () => {
@@ -32,9 +39,31 @@ const Pokedex = (props) => {
     
 
     return (
+        <div className="App">
+        <div className="link-container">
+       <p
+         className={`App-link ${
+           i18n.language === "es" ? "selected" : "unselected"
+         }`}
+         onClick={() => changeLaguage("es")}
+       >
+        <button class="btnMx">🇲🇽</button> 
+       </p>
+       <p
+         className={`App-link ${
+           i18n.language === "en" ? "selected" : "unselected"
+         }`}
+         onClick={() => changeLaguage("en")}
+       >
+         <button class="btnUs">🇺🇸</button>
+       </p>
+     </div>
+     <h1>{t("title")}</h1>
+     <h2>{t("subtitle")}</h2>
         <>
         <div>
             <div className="header">
+                
                 <Pagination 
                    page={page + 1}
                    totalPages={total} 
@@ -57,7 +86,9 @@ const Pokedex = (props) => {
             )} 
         </div>  
         </>
+        </div>
     )
+    
 }
 
 export default Pokedex
