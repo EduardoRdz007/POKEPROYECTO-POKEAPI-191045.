@@ -1,11 +1,21 @@
 import { useEffect, useState, useTransition } from "react";
+import React from "react";
 import { getPokemonData, getPokemons, searchPokemon } from "./api";
 import Navbar from "./components/Navbar";
 import Pokedex from "./components/Pokedex";
 import Searchbar from "./components/Searchbar";
 import { FavoriteProvider } from "./contexts/global/favorite.context";
 import "./app.css";
-import { useTranslation } from "react-i18next";
+// import About from "./components/191045";
+// import Home from "./components/Pokedex"
+// import "./styles/navbar.css"
+// import Shop from "./Shop";
+// import Nav from "./Nav";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import About from './components/191045';
+import About from './components/191045';
+import Home from './components/Pokedex';
+
 
 const localStorageKey = "favorite_pokemon";
 
@@ -18,12 +28,23 @@ function App() {
     const [favorites, setFavorites] = useState([]);
     const [notFound, setNotFound] = useState(false);
     const [searching, setSearching] =useState(false);
-    const {i18n, t} = useTranslation();
-
-    function changeLaguage(language){
-      i18n.changeLanguage(language);
-    }
-
+    // <Router>
+    //   <Navbar />
+    //   <Routes>
+    //     <Route path='./components/191045.jsx' component={About} />
+    //   </Routes>
+    // </Router>
+  //   <Router>
+  //   <div className="App">
+  //     <Navbar />
+  //     <Routes>
+  //       <Route path='Home' exact component={Home} />
+  //       <Route path='About' component={About} />
+  //     </Routes>
+  //   </div>
+  // </Router>
+    
+    
     const fetchPokemons = async () => {
         try {
           setLoading(true);
@@ -81,6 +102,7 @@ function App() {
         setNotFound(true);
         setLoading(false);
         return;
+        
       } else {
         setPokemons([result]);
         setPage(0);
@@ -89,35 +111,32 @@ function App() {
       setLoading(false);    
       setSearching(false);
     };
+    
 
     return (
-      <div className="App">
-         <div className="link-container">
-        <p
-          className={`App-link ${
-            i18n.language === "es" ? "selected" : "unselected"
-          }`}
-          onClick={() => changeLaguage("es")}
-        >
-         <button class="btnMx">🇲🇽</button> 
-        </p>
-        <p
-          className={`App-link ${
-            i18n.language === "en" ? "selected" : "unselected"
-          }`}
-          onClick={() => changeLaguage("en")}
-        >
-          <button class="btnUs">🇺🇸</button>
-        </p>
-      </div>
-      <h1>{t("title")}</h1>
-      <h2>{t("subtitle")}</h2>
+      
      
       <FavoriteProvider value={{favoritePokemons: favorites, updateFavoritePokemons: updateFavoritePokemons}}>  
         <div>
-            <Navbar />
+        {/* <div>
+        <Router>
+    <div className="App">
+      <Navbar />
+      <Routes>
+        <Route path='/Home' exact component={Home} />
+        <Route path='/About' component={About} />
+      </Routes>
+    </div>
+  </Router>
+  </div> */}
+          
+      
+            
             <div className="App">
+            <Navbar />
+              
             <Searchbar onSearch={onSearch}/>
+            
             {notFound ? (
               <div className="not-found">
                 No se ha encontrado el Pokemon...
@@ -129,13 +148,14 @@ function App() {
               page={page}
               setPage={setPage}
               total={total}
+              
             />
             )}
             </div>
         </div>
      
         </FavoriteProvider>  
-       </div>
+      //  </div>
     );
 }
 

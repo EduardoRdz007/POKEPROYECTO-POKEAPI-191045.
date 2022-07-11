@@ -4,6 +4,8 @@ import App from './App';
 import { I18nextProvider } from "react-i18next";
 
 import i18n from "./config/localization/i18n";
+const rootElement = document.getElementById("root");
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -11,6 +13,6 @@ ReactDOM.render(
     <App />
     </I18nextProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  rootElement
 );
 
