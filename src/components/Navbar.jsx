@@ -55,17 +55,8 @@
 // export default Navbar
 
 import React, { useState, useEffect } from 'react'
-// import React from "react";
 import FavoriteContext from "../contexts/global/favorite.context";
-// import '/navbar.css'
 import '../styles/navbar.css'
-
-// import "../styles/navbar.css";
-// import { Link } from "react-router-dom";
-// import '../styles/navbar.css'
-
-// import React, { useState, useEffect } from 'react'
-// import { BrowserRouter, NavLink } from 'react-router-dom';
 import { Link, Outlet } from "react-router-dom"; 
 
 
