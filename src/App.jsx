@@ -16,6 +16,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import About from './components/191045';
 import Home from './components/Pokedex';
 
+// import React, { useState, useEffect } from 'react'
+// import { BrowserRouter, NavLink } from 'react-router-dom';
+// import './app.css';
+// import { Link, Outlet } from "react-router-dom"; 
+
 
 const localStorageKey = "favorite_pokemon";
 
@@ -131,9 +136,11 @@ function App() {
   </div> */}
           
       
-            
+          
             <div className="App">
             <Navbar />
+            
+            
               
             <Searchbar onSearch={onSearch}/>
             
@@ -160,3 +167,95 @@ function App() {
 }
 
 export default App;
+
+
+// import React, { useState, useEffect } from 'react'
+// import { BrowserRouter, NavLink } from 'react-router-dom';
+// import './app.css';
+// import { Link, Outlet } from "react-router-dom"; 
+
+// function App() {
+
+//   return(
+//     <div >
+//       <div className='App'>
+//         <h1>Pokedex</h1>
+//         <nav style={{ paddingBottom: "1rem" }}>
+//           <Link to="./components/Pokedex.jsx"><h1 className='nav'>Pokemons</h1></Link>
+//           <Link to="./components/Searchbar.jsx"><h1 className='nav'>Buscar Pokemon</h1></Link>
+//           <Link to="./components/191045.jsx"><h1 className='nav'>Student</h1></Link>
+//         </nav>
+//       </div>
+//       <Outlet />
+//     </div>
+//   )
+// }
+//     export default App;
+
+// import React, { useState, useEffect } from 'react'
+// import { BrowserRouter, NavLink } from 'react-router-dom';
+// import './app.css';
+// import { Link, Outlet } from "react-router-dom"; 
+
+// function App() {
+
+//   return(
+//     <div >
+//       <div className='navbar'>
+//         <h1>Pokedex</h1>
+//         <navbar style={{ paddingBottom: "1rem" }}>
+//           <Link to="/Pokedex.jsx"><h1 className='navbar'>Pokemons</h1></Link>
+//           <Link to="/Searchbar.jsx"><h1 className='navbar'>Buscar Pokemon</h1></Link>
+//           <Link to="/191045.jsx"><h1 className='navbar'>Student</h1></Link>
+//         </navbar>
+//       </div>
+//       <Outlet />
+//     </div>
+//   )
+// }
+//     export default App;
+
+
+// import React from "react";
+// import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+// import Notes from "./components/191045"
+
+// const Home = () => <h1>Home</h1>
+// // const Notes = () => <h1>Notes</h1>
+// const User = () => <h1>User</h1>
+
+// const inlineStyles ={
+//   padding: 5
+// }
+
+// const App = () =>{
+//   return(
+//     <BrowserRouter>
+//     <header>
+//       <Link to ='/' style={inlineStyles}>
+//         Home
+//       </Link>
+//       <Link to ='/notes' style={inlineStyles}>
+//         Notes
+//       </Link>
+//       <Link to ='/user' style={inlineStyles}>
+//         User
+//       </Link>
+//     </header>
+
+//     <Routes>
+//       <Route path='/notes'>
+//         <Notes/>
+//       </Route>
+//       <Route path='/user'>
+//         <User/>
+//       </Route>
+//       <Route path='/'>
+//         <Home/>
+//       </Route>
+//     </Routes>
+
+//     </BrowserRouter>
+//   )
+// }
+// export default App

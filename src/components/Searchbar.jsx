@@ -1,5 +1,8 @@
 import { useState } from "react";
 import "../styles/searchbar.css";
+// import Navbar from "./Navbar";
+
+
 
 const Searchbar = (props) => {
     const { onSearch } = props;
@@ -17,7 +20,9 @@ const Searchbar = (props) => {
     }
 
     return (
+        
         <>
+        
           <div className="searchbar-container">
               <div className="searchbar">
                  <input 

@@ -2,6 +2,9 @@ import "../styles/pokedex.css";
 import Pagination from "./Pagination";
 import Pokemon from "./Pokemon";
 import { useTranslation } from "react-i18next";
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import { Link, Outlet } from "react-router-dom"; 
 
 
 
@@ -78,11 +81,13 @@ const Pokedex = (props) => {
             ) : (
             <div className="pokedex-grid">
                {pokemons.map((pokemon, idx) => {
+               
                    return(
                        <Pokemon pokemon={pokemon} key={pokemon.name}></Pokemon>
                    )
                })}
             </div>  
+           
             )} 
         </div>  
         </>
