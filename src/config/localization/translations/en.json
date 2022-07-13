@@ -1,5 +1,7 @@
 {
     "title": "Welcome Pokemon",
-    "subtitle": "Pokemon app with internationalization"
+    "subtitle": "Pokemon app with internationalization",
+    "Alt": "Height:",
+    "Anc": "Weight"
   }
   

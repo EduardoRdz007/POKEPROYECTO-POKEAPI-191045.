@@ -19,20 +19,20 @@ ReactDOM.render(
     {/* <App /> */}
     <BrowserRouter>
       <Routes>
-        <Route path="/" element= { <App /> } >
+        <Route path="/" element= { <App /> } />
           {/* <Route path="/Searchbar" element = {<Buscar/>}>
             <Route path=":pokemon.id" element = { <Pokemon/> } />
           </Route> */}
           {/* <Route path="/Pokemon" element= { <Pokemon/> } >
             <Route path=':pokemon.id' element = { <Pokemon/> } />
           </Route>  */}
-          <Route path="/191045" element = { <Student/> } ></Route>
+          <Route path="/191045" element = { <Student/> } />
           <Route path="*" element = {
             <main style={{ padding: "1rem" }}>
               <p>There's nothing here</p>
             </main>
           }/>
-        </Route>
+       
       </Routes>    
     </BrowserRouter>
    
