@@ -1,10 +1,12 @@
 import { useContext } from "react";
 import FavoriteContext from "../contexts/global/favorite.context";
 import "../styles/pokemon.css";
+import { useTranslation } from "react-i18next";
 
 const Pokemon = (props) => {
 
     const { pokemon } = props;
+    const { t } = useTranslation();
     const {favoritePokemons, updateFavoritePokemons} = useContext(FavoriteContext);
 
 
@@ -43,8 +45,8 @@ const Pokemon = (props) => {
                     </button>
                 </div>
                 <div className="pokemon-info">
-                        <div className="pokemon-info-text">Height: {pokemon.height}</div>
-                        <div className="pokemon-info-text">Weight: {pokemon.weight}</div>
+                        <div className="pokemon-info-text">{t("Alt")} {pokemon.height}</div>
+                        <div className="pokemon-info-text">{t("Anc")}  {pokemon.weight}</div>
                 </div>
             </div>
         </div>

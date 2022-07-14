@@ -1,7 +1,12 @@
 {
     "title": "Bienvenido Pokemon",
     "subtitle": "Aplicación Pokémon con internacionalización",
-    "Alt": "Altura",
-    "Anc": "Peso"
+    "Alt": "Altura:",
+    "Anc": "Peso:",
+    "Nom": " Nombre:",
+    "Mat": " Materia: ",
+    "Matr y Grup": "Matricula y Grupo:",
+    "Tel": "Telefono: ",
+    "Nacion": "Nacionalidad:"
   }
   

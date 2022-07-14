@@ -2,6 +2,11 @@
     "title": "Welcome Pokemon",
     "subtitle": "Pokemon app with internationalization",
     "Alt": "Height:",
-    "Anc": "Weight"
+    "Anc": "Weight:",
+    "Nom": "Name:",
+    "Mat": "Matter: ",
+    "Matr y Grup": "Registration and Group: ",
+    "Tel": "Phone: ",
+    "Nacion": "Nationality:"
   }
   
