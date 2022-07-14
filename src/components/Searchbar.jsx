@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../styles/searchbar.css";
+import { useTranslation } from "react-i18next";
 // import Navbar from "./Navbar";
 
 
@@ -7,6 +8,8 @@ import "../styles/searchbar.css";
 const Searchbar = (props) => {
     const { onSearch } = props;
     const [search, setSearch] = useState("");
+
+    const { t } = useTranslation();
 
     const onChange = (e) => {
         setSearch(e.target.value);
@@ -27,13 +30,13 @@ const Searchbar = (props) => {
               <div className="searchbar">
                  <input 
                  type="text"
-                 placeholder="Buscar Pokemon"
+                 placeholder= {t("BusP")} 
                  onChange={onChange} 
                  />
               </div>
               <div className="searchbar-btn">
                  <button onClick={onClick}>
-                     Buscar
+                 {t("Bus")} 
                  </button>
               </div>
           </div>  
