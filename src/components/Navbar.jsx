@@ -58,6 +58,7 @@ import React, { useState, useEffect } from 'react'
 import FavoriteContext from "../contexts/global/favorite.context";
 import '../styles/navbar.css'
 import { Link, Outlet } from "react-router-dom"; 
+import { useTranslation } from "react-i18next";
 
 
 
@@ -66,7 +67,7 @@ function App () {
 
   const { useContext } = React;
     const {favoritePokemons} = useContext(FavoriteContext);
-
+    const { t } = useTranslation();
     
     const pokeLogo = "https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png"
     
@@ -82,7 +83,7 @@ function App () {
               alt="pokemon-logo"
               className="navbar-image"
               />
-          <Link to="/191045"><h1 className='nav'>Student</h1></Link>
+          <Link to="/191045"><h1 className='nav'>{t("STUD")}</h1></Link>
           &#10084;&#65039; {favoritePokemons.length}
         </nav>
       </div>
